@@ -1,0 +1,28 @@
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.navigation_home{
+	height: 0.328125rem;
+	background-color: #ff8d1b;
+}
+.navigation_home > .ant-menu-horizontal{
+	border: none;
+	background-color: #ff8d1b;
+	height: 0.328125rem;
+}
+.navigation_home > .ant-menu-horizontal > li{
+	color: #fff;
+	font-size: 0.104167rem;
+}
+.navigation_home .ant-menu-item-active{
+	border: none;
+}

@@ -1,0 +1,39 @@
+#header_home{
+	height: 0.677083rem;
+}
+#logo,#logo > img{
+	width: 0.489583rem;
+	height: 0.489583rem;
+}
+#logo{
+	margin: 0.104167rem 0 0 1.229167rem;
+}
+#search_home{
+	width: 2.979167rem;
+	margin: 0.260417rem auto;
+}
+#search_home .ant-input-search-button{
+	background-color: #000;
+	border-top-right-radius: 0.260417rem;
+	border-bottom-right-radius: 0.260417rem;
+}
+#search_home .ant-input{
+	border-radius: 0.260417rem;
+}
+
+#userMessage_home{
+	margin: 0.290417rem 2.46875rem 0 0;
+}
+#userMessage_home > .button{
+	width: 0.729167rem;
+	height: 0.208333rem;
+	background-color: #ff8d1b;
+	text-align: center;
+	line-height: 0.208333rem;
+	color: #fff;
+	font-weight: bold;
+}
+#userMessage_home > .button:hover{
+	background-color: #000;
+	cursor: pointer;
+}
