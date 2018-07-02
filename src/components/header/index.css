@@ -1,5 +1,7 @@
 #header_home{
+	width: 10.0rem;
 	height: 0.677083rem;
+	margin: 0 auto;
 }
 #logo,#logo > img{
 	width: 0.489583rem;
