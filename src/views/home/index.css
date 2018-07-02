@@ -10,6 +10,8 @@
   color: #fff;
 }
 
+
+/*  导航区域  */
 .navigation_home{
 	height: 0.328125rem;
 	background-color: #ff8d1b;
@@ -17,12 +19,49 @@
 .navigation_home > .ant-menu-horizontal{
 	border: none;
 	background-color: #ff8d1b;
-	height: 0.328125rem;
+	height: 0.321667rem;
+	width: 7.40625rem;
+	margin: 0 auto;
 }
-.navigation_home > .ant-menu-horizontal > li{
+
+.navigation_home .ant-menu-horizontal > .ant-menu-item{
 	color: #fff;
 	font-size: 0.104167rem;
+	margin-top: 0px; 
+	height: 0.321667rem;
+	width: 1.234375rem;
+	text-align: center;
+	border-right: 1px dotted #fff;
+	border-left: 1px dotted #fff;
 }
-.navigation_home .ant-menu-item-active{
+.navigation_home .ant-menu-horizontal > .ant-menu-item:first-of-type{
+	border-left: 1px dotted #fff;
+}
+
+
+.navigation_home .ant-menu-horizontal > .ant-menu-item-active{
 	border: none;
+	color: #fff;
+	background-color: #000;
+	border-bottom: 2px solid #000;
+}
+.navigation_home .ant-menu-horizontal > .ant-menu-item-selected{
+	border: none;
+	color: #fff;
+	background-color: #000;
+	border-bottom: 2px solid #000;
+}
+
+
+/*  banner区域  */
+#banner_home{
+	width: 10.0rem;
+	height: 3.270833rem;
+	margin: 0 auto;
+}
+#banner_home .ant-carousel{
+	width: 7.916667rem;
+}
+#banner_home .slick-slide{
+	height: 3.270833rem;
 }

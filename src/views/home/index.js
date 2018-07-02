@@ -58,12 +58,15 @@ class  Home extends Component{
 						</Menu.Item>
 					</Menu>
 				</div>
-				<Carousel dots={false}>
-					<div><h3>1</h3></div>
-					<div><h3>2</h3></div>
-					<div><h3>3</h3></div>
-					<div><h3>4</h3></div>
-				</Carousel>
+				<section id="banner_home">
+					<Carousel dots={false}>
+						<div><h3>1</h3></div>
+						<div><h3>2</h3></div>
+						<div><h3>3</h3></div>
+						<div><h3>4</h3></div>
+					</Carousel>
+				</section>
+				
 			</div>
 		)
 	}
