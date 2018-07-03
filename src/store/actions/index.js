@@ -1,6 +1,5 @@
-import { test } from './test.js'
+import * as home from './home'
 
-
-export {
-	test
+export default {
+	...home
 }

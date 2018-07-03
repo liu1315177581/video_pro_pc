@@ -1,6 +1,2 @@
-const TEST = 'TEST';
+export const BANNER_MESSAGE = 'BANNER_MESSAGE'
 
-
-export {
-	TEST
-}

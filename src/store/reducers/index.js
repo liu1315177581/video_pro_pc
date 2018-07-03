@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux'
-import { testReducer } from './test.js'
-
+import * as home from './home'
 
 
 const todoApp = combineReducers({
-  testReducer
+  ...home
 })
 
 
