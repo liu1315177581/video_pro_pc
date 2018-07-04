@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import * as Actions from '@/store/actions';
-import { Carousel,Menu  } from 'antd'
+import { Carousel,Menu,Rate  } from 'antd'
 import './index.css'
 import Header from '@/components/header/index'
 
@@ -20,13 +20,9 @@ class  Home extends Component{
 
     }
 
-
-	handleClick(e){
-		e.preventDefault();
-		this.setState({
-			current: e.key,
-		});
-		console.log(e.key)
+	handleClick(item){
+		let data = Object.assign({}, this.state, { current: item.key })
+		this.setState(data)
 		// Actions.default.banner_message_fun(this.props.dispatch)
 		
 	}
@@ -34,11 +30,9 @@ class  Home extends Component{
 		e.preventDefault();
 		this.refs.swipeBigPic.goTo(index);
 	}
-	afterChangeFun(index){
-		this.setState({
-			index:index
-		})
-		console.log(index)
+	beforeChangeFun(from,index){
+		let data = Object.assign({}, this.state, { index:index })
+		this.setState(data)
 	}
 	render(){
 		return(
@@ -48,6 +42,7 @@ class  Home extends Component{
 					<Menu
 						onClick={this.handleClick.bind(this)}
 						mode="horizontal"
+						defaultSelectedKeys={[this.props.navigation_message[0].key]}
 						>
 						{
 							this.props.navigation_message.map((item,index)=>{
@@ -64,7 +59,7 @@ class  Home extends Component{
 					<Carousel 
 						ref="swipeBigPic" 
 						dots={false}
-						afterChange={this.afterChangeFun}
+						beforeChange={this.beforeChangeFun.bind(this)}
 					>
 						{
 							this.props.banner_message.map((item,index)=>{
@@ -73,11 +68,18 @@ class  Home extends Component{
 										<a href={item.url_link}>
 											<img className="images" src={item.img} alt=""/>
 										</a>
+										<div className="popUp_banner_home">
+											<h3>
+												{item.title}
+											</h3>
+											<p>
+												{item.text}
+											</p> 
+										</div>
 									</div>
 								)
 							})
 						}
-						
 					</Carousel>
 					<ul className="banner_navigateCon_home fl">
 						{
@@ -101,7 +103,32 @@ class  Home extends Component{
 						}
 					</ul>
 				</section>
-				
+				<section className="list_video_home">
+					<ul className="clearfix">
+						{
+							this.props.banner_message.map((item,index)=>{
+								return (
+									<li className="li_video_home fl" key={index}>
+										<a href="">
+											<img className="images" src={item.img} alt=""/>
+											<dl>
+												<dt>
+													{item.title}
+												</dt>
+												<dd className="clearfix">
+													<span>
+														{item.show_year.substr(0,4)}
+													</span>
+													<Rate className="fr" disabled defaultValue={2} />
+												</dd>
+											</dl>
+										</a>
+									</li>
+								)
+							})
+						}
+					</ul>
+				</section>
 			</div>
 		)
 	}
